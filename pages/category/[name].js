@@ -11,7 +11,7 @@ const Category = (props) => {
     <>
       <CartLink />
       <Head>
-        <title>Jamstack ECommerce - {title}</title>
+        <title>Mahinlo - {title}</title>
         <meta name="description" content={`Jamstack ECommerce - ${title}`} />
         <meta property="og:title" content={`Jamstack ECommerce - ${title}`} key="title" />
       </Head>
