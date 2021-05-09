@@ -5,20 +5,29 @@ import CartLink from '../components/CartLink'
 import { fetchInventory } from '../utils/inventoryProvider'
 
 function Categories ({ categories = [] }) {
+  const daniel = {
+    backgroundImage: `url("https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80")`
+  };
+  const daniel1 = {
+      backgroundImage: `url("https://via.placeholder.com/500")`
+  };
   return (
     <>
       <div className="w-full">
         <CartLink />
         <Head>
-          <title>Jamstack ECommerce - All Categories</title>
-          <meta name="description" content={`Jamstack ECommerce - All categories`} />
-          <meta property="og:title" content="Jamstack ECommerce - All Categories" key="title" />
+          <title>Shop - Mahinlo</title>
+          <link rel="icon" href="/mahinlo-cl.png" />
+          <meta name="description" content={`Shop - Mahinlo`} />
+          <meta property="og:title" content="Shop - Mahinlo" key="title" />
         </Head>
-        <div className="
-          pt-4 sm:pt-10 pb-8
-        ">
-          <h1 className="text-5xl font-light">All categories</h1>
-        </div>
+        <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill" style={daniel}>
+                <div class="md:w-1/2">
+                    <p class="font-bold text-sm uppercase text-white">Mahinlo</p>
+                    <p class="text-3xl font-bold text-white">Shop</p>
+                
+                </div>  
+            </div>
         <div className="flex flex-col items-center">
           
           {/* <div className="my-4 lg:my-8 flex flex-col lg:flex-row justify-between"> */}

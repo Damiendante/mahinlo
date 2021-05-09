@@ -129,9 +129,10 @@ const Checkout = ({ context }) => {
   return (
     <div className="flex flex-col items-center pb-10">
       <Head>
-        <title>Jamstack ECommerce - Checkout</title>
+        <title>Checkout - Mahinlo</title>
+        <link rel="icon" href="/mahinlo-cl.png" />
         <meta name="description" content={`Check out`} />
-        <meta property="og:title" content="Jamstack ECommerce - Checkpit" key="title" />
+        <meta property="og:title" content="Mahinlo - Checkout" key="title" />
       </Head>
       <div
         className="

@@ -29,3 +29,8 @@
 .Toastify__progress-bar--default {
   background: #89bdf9 !important;
 }
+
+
+.top-50{
+  top: 50%;
+}

@@ -19,7 +19,7 @@ export default function Layout({ children, categories }) {
             <div className="mb-4 sm:mr-16 max-w-48 sm:max-w-none">
               <Link href="/">
                 <a aria-label="Home">
-                  <img src="/mtangazaji.png" alt="logo" width="90" height="28" />
+                  <img src="/mahinlop.png" alt="logo" width="90" height="28" />
                 </a>
               </Link>
             </div>
@@ -30,11 +30,11 @@ export default function Layout({ children, categories }) {
                     sm:mr-8 sm:mb-0
                     mb-4 text-left text-smaller mr-4
                   ">
-                  Homes
+                  Home
                   </p>
                 </a>
               </Link>
-              <Link href="/">
+              <Link href="/about">
                 <a aria-label="Home">
                   <p className="
                     sm:mr-8 sm:mb-0
@@ -44,37 +44,37 @@ export default function Layout({ children, categories }) {
                   </p>
                 </a>
               </Link>
-              <Link href="/">
+              <Link href="/categories">
+                <a aria-label="All categories">
+                  <p className="
+                    sm:mr-8 sm:mb-0
+                    mb-4 text-left text-smaller mr-4 
+                  ">
+                  Shop
+                  </p>
+                </a>
+              </Link>
+              <Link href="/blog">
                 <a aria-label="Home">
                   <p className="
                     sm:mr-8 sm:mb-0
                     mb-4 text-left text-smaller mr-4
                   ">
-                  Products
+                  Blog
                   </p>
                 </a>
               </Link>
-              <Link href="/">
-                <a aria-label="Home">
+              <Link href="/work">
+                <a aria-label="All categories">
                   <p className="
                     sm:mr-8 sm:mb-0
-                    mb-4 text-left text-smaller mr-4
-                  ">
-                  Resources
-                  </p>
-                </a>
-              </Link>
-              {/* <Link href="/">
-                <a aria-label="Home">
-                  <p className="
-                    sm:mr-8 sm:mb-0
-                    mb-4 text-left text-smaller mr-4
+                    mb-4 text-left text-smaller mr-4 
                   ">
                   Work
                   </p>
                 </a>
-              </Link> */}
-              <Link href="/">
+              </Link>
+              <Link href="/contact">
                 <a aria-label="Home">
                   <p className="
                     sm:mr-8 sm:mb-0
@@ -100,21 +100,12 @@ export default function Layout({ children, categories }) {
                     </a>
                   </Link>
                 ))
-              }
-              <Link href="/categories">
-                <a aria-label="All categories">
-                  <p className="
-                    sm:mr-8 sm:mb-0
-                    mb-4 text-left text-smaller mr-4 
-                  ">
-                  All
-                  </p>
-                </a>
-              </Link> */}
+              } */}
             </div>
           </div>
         </div>
       </nav>
+      {/* Children routes are displayed here */}
       <div className="mobile:px-10 px-4 pb-10 flex justify-center">
         <main className="w-fw">{children}</main>
       </div>
@@ -126,16 +117,16 @@ export default function Layout({ children, categories }) {
         desktop:px-0
         border-solid
         border-t border-gray-300">
-          <span className="block text-gray-700 text-xs">Copyright © 2021 Mtangazaji Sacco. All rights reserved.</span>
+          <span className="block text-gray-700 text-xs">Copyright © 2021 Mahinlo. All rights reserved.</span>
           <div className="
             sm:justify-end sm:m-0
             flex flex-1 mt-4
           ">
-            {/* <Link href="/admin">
+            <Link href="/admin">
               <a aria-label="Admin panel">
               <p className="text-sm font-semibold">Admins</p>
               </a>
-            </Link> */}
+            </Link>
           </div>
         </div>
       </footer>
