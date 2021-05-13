@@ -12,13 +12,14 @@ const Category = (props) => {
     backgroundImage: `url("https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80")`
   };
   const daniel1 = {
-      backgroundImage: `url("https://via.placeholder.com/500")`
+    backgroundImage: `url("https://via.placeholder.com/500")`
   };
   return (
     <>
       <CartLink />
       <Head>
-        <title>{title} - Mahinlo</title>
+        <title>Mahinlo - {title}</title>
+        <link rel="icon" href="/mahinlo-cl.png" />
         <meta name="description" content={`Mahinlo - ${title}`} />
         <meta property="og:title" content={`Mahinlo - ${title}`} key="title" />
       </Head>
@@ -28,12 +29,12 @@ const Category = (props) => {
             <h1 className="text-5xl font-light">{titleIfy(title)}</h1>
           </div> */}
           <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill" style={daniel}>
-                <div class="md:w-1/2">
-                    <p class="font-bold text-sm uppercase text-white">Mahinlo</p>
-                    <p class="text-3xl font-bold text-white">{titleIfy(title)}</p>
-                
-                </div>  
+            <div class="md:w-1/2">
+              <p class="font-bold text-sm uppercase text-white">Mahinlo</p>
+              <p class="text-3xl font-bold text-white">{titleIfy(title)}</p>
+
             </div>
+          </div>
 
           <div>
             <div className="flex flex-1 flex-wrap flex-row">
@@ -51,19 +52,19 @@ const Category = (props) => {
                 })
               }
             </div>
-            
+
 
           </div>
-          </div>
+        </div>
       </div>
     </>
   )
 }
 
-export async function getStaticPaths () {
+export async function getStaticPaths() {
   const categories = await fetchCategories()
   const paths = categories.map(category => {
-    return { params: { name: slugify(category) }}
+    return { params: { name: slugify(category) } }
   })
   return {
     paths,
@@ -71,8 +72,8 @@ export async function getStaticPaths () {
   }
 }
 
-export async function getStaticProps ({ params }) {
-  const category = params.name.replace(/-/g," ")
+export async function getStaticProps({ params }) {
+  const category = params.name.replace(/-/g, " ")
   const inventory = await inventoryForCategory(category)
   return {
     props: {

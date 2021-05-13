@@ -182,7 +182,30 @@ const Checkout = ({ context }) => {
             <div className="flex flex-1 flex-col md:flex-row">
               <div className="flex flex-1 pt-8 flex-col">
                 <div className="mt-4 border-t pt-10">
+
                   <form onSubmit={handleSubmit}>
+                    {errorMessage ? <span>{errorMessage}</span> : ""}
+                    <Input
+                      onChange={onChange}
+                      value={input.name}
+                      name="name"
+                      placeholder="M-PESA NUMBER"
+                    />
+
+
+                    <button
+                      type="submit"
+                      disabled={!stripe}
+                      onClick={handleSubmit}
+                      className="hidden md:block bg-primary hover:bg-black text-white font-bold py-2 px-4 mt-4 rounded focus:outline-none focus:shadow-outline"
+                      type="button"
+                    >
+                      Confirm order
+                    </button>
+                  </form>
+
+
+                  {/* <form onSubmit={handleSubmit}>
                     {errorMessage ? <span>{errorMessage}</span> : ""}
                     <Input
                       onChange={onChange}
@@ -230,7 +253,7 @@ const Checkout = ({ context }) => {
                     >
                       Confirm order
                     </button>
-                  </form>
+                  </form> */}
                 </div>
               </div>
               <div className="md:pt-20">
@@ -241,9 +264,9 @@ const Checkout = ({ context }) => {
                   </p>
                 </div>
                 <div className="pl-4 flex flex-1 my-2">
-                  <p className="text-sm pr-10">Shipping</p>
+                  <p className="text-sm pr-10">Worker Fare</p>
                   <p className="w-38 flex justify-end">
-                    FREE SHIPPING
+                    Free for May
                   </p>
                 </div>
                 <div className="md:ml-4 pl-2 flex flex-1 bg-gray-200 pr-4 pb-1 pt-2 mt-2">
@@ -254,9 +277,9 @@ const Checkout = ({ context }) => {
                 </div>
                 <button
                   type="submit"
-                  disabled={!stripe}
+                  // disabled={!stripe}
                   onClick={handleSubmit}
-                  className="md:hidden bg-primary hover:bg-black text-white font-bold py-2 px-4 mt-4 rounded focus:outline-none focus:shadow-outline"
+                  className="md:hidden bg-yellow-900 hover:bg-black text-white font-bold py-2 px-4 mt-4 rounded focus:outline-none focus:shadow-outline"
                   type="button"
                 >
                   Confirm order

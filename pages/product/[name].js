@@ -12,9 +12,9 @@ const ItemView = (props) => {
   const [numberOfitems, updateNumberOfItems] = useState(1)
   const { product } = props
   const { price, image, name, description } = product
-  const { context: { addToCart }} = props
+  const { context: { addToCart } } = props
 
-  function addItemToCart (product) {
+  function addItemToCart(product) {
     product["quantity"] = numberOfitems
     addToCart(product)
   }
@@ -33,6 +33,7 @@ const ItemView = (props) => {
       <CartLink />
       <Head>
         <title>{name} - Mahinlo</title>
+        <link rel="icon" href="/mahinlo-cl.png" />
         <meta name="description" content={description} />
         <meta property="og:title" content={`Mahinlo - ${name}`} key="title" />
       </Head>
@@ -50,14 +51,17 @@ const ItemView = (props) => {
           <h1 className="
            sm:mt-0 mt-2 text-5xl font-light leading-large
           ">{name}</h1>
-          <h2 className="text-2xl tracking-wide sm:py-8 py-6">Ksh {price}</h2>
+          <div className="flex flex-row">
+            <h2 className="text-2xl tracking-wide text-yellow-900 sm:py-8 py-6 mr-24">Ksh {price}</h2>
+            <h2 className="text-2xl tracking-wide text-yellow-900 sm:py-8 py-6">60 minutes</h2>
+          </div>
           <p className="text-gray-600 leading-7">{description}</p>
           <div className="my-6">
-            <QuantityPicker
+            {/* <QuantityPicker
               increment={increment}
               decrement={decrement}
               numberOfitems={numberOfitems}
-            />
+            /> */}
           </div>
           <Button
             full
@@ -70,10 +74,10 @@ const ItemView = (props) => {
   )
 }
 
-export async function getStaticPaths () {
+export async function getStaticPaths() {
   const inventory = await fetchInventory()
   const paths = inventory.map(item => {
-    return { params: { name: slugify(item.name) }}
+    return { params: { name: slugify(item.name) } }
   })
   return {
     paths,
@@ -81,8 +85,8 @@ export async function getStaticPaths () {
   }
 }
 
-export async function getStaticProps ({ params }) {
-  const name = params.name.replace(/-/g," ")
+export async function getStaticProps({ params }) {
+  const name = params.name.replace(/-/g, " ")
   const inventory = await fetchInventory()
   const product = inventory.find(item => slugify(item.name) === slugify(name))
 

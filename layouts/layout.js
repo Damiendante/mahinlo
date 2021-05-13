@@ -30,7 +30,7 @@ export default function Layout({ children, categories }) {
                     sm:mr-8 sm:mb-0
                     mb-4 text-left text-smaller mr-4
                   ">
-                  Home
+                    Home
                   </p>
                 </a>
               </Link>
@@ -40,7 +40,7 @@ export default function Layout({ children, categories }) {
                     sm:mr-8 sm:mb-0
                     mb-4 text-left text-smaller mr-4
                   ">
-                  About Us
+                    About Us
                   </p>
                 </a>
               </Link>
@@ -50,7 +50,7 @@ export default function Layout({ children, categories }) {
                     sm:mr-8 sm:mb-0
                     mb-4 text-left text-smaller mr-4 
                   ">
-                  Shop
+                    Shop
                   </p>
                 </a>
               </Link>
@@ -60,7 +60,7 @@ export default function Layout({ children, categories }) {
                     sm:mr-8 sm:mb-0
                     mb-4 text-left text-smaller mr-4
                   ">
-                  Blog
+                    Blog
                   </p>
                 </a>
               </Link>
@@ -70,7 +70,7 @@ export default function Layout({ children, categories }) {
                     sm:mr-8 sm:mb-0
                     mb-4 text-left text-smaller mr-4 
                   ">
-                  Work
+                    Work
                   </p>
                 </a>
               </Link>
@@ -80,7 +80,7 @@ export default function Layout({ children, categories }) {
                     sm:mr-8 sm:mb-0
                     mb-4 text-left text-smaller mr-4
                   ">
-                  Contact
+                    Contact
                   </p>
                 </a>
               </Link>
@@ -114,19 +114,17 @@ export default function Layout({ children, categories }) {
         sm:flex-row sm:items-center
         flex-col
         flex w-fw px-12 py-8
-        desktop:px-0
-        border-solid
-        border-t border-gray-300">
+        desktop:px-0">
           <span className="block text-gray-700 text-xs">Copyright © 2021 Mahinlo. All rights reserved.</span>
           <div className="
             sm:justify-end sm:m-0
             flex flex-1 mt-4
           ">
-            <Link href="/admin">
+            {/* <Link href="/admin">
               <a aria-label="Admin panel">
               <p className="text-sm font-semibold">Admins</p>
               </a>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </footer>

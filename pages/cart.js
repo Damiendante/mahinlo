@@ -75,13 +75,13 @@ const Cart = ({ context }) => {
                                 </p>
                               </a>
                             </Link>
-                            <div className="ml-4">
+                            {/* <div className="ml-4">
                               <QuantityPicker
                                 numberOfitems={item.quantity}
                                 increment={() => increment(item)}
                                 decrement={() => decrement(item)}
                               />
-                            </div>
+                            </div> */}
                             <div className="flex flex-1 justify-end">
                               <p className="m-0 pl-10 text-gray-900 tracking-wider">
                                 {DENOMINATION + item.price}
@@ -134,8 +134,8 @@ const Cart = ({ context }) => {
                       )
                     })
                   }
-                </div>  
-            </div>
+                </div>
+              </div>
             )
           }
           <div className="flex flex-1 justify-end py-8">

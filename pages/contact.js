@@ -28,7 +28,7 @@ const Contact = ({ inventoryData = [], categories: categoryData = [] }) => {
 
             </div>
 
-            <div class="bg-cover bg-center  h-auto text-white py-24 px-10 object-fill" style={daniel}>
+            <div class="bg-cover bg-center h-auto text-white py-24 px-10 object-fill" style={daniel}>
                 <div class="md:w-1/2">
                     <p class="font-bold text-sm uppercase text-white">Mahinlo</p>
                     <p class="text-3xl font-bold text-white">Contact Us</p>

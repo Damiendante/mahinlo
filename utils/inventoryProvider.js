@@ -5,6 +5,7 @@ Inventory items should adhere to the following schema:
 type Product {
   id: ID!
   categories: [String]!
+  no: Int!
   price: Float!
   name: String!
   image: String!
